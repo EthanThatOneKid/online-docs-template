@@ -20,3 +20,5 @@ const root = path.join(__dirname, "../pages");
 const pages = readdirRecursive(root);
 const serializedPages = JSON.stringify(pages, null, 2);
 fs.writeFileSync(path.join(__dirname, "../pages.json"), serializedPages);
+
+console.log("Success...", serializedPages);
