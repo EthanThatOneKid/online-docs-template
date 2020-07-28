@@ -8,9 +8,10 @@
 </script>
 
 <script>
-  export let data;
+	import Document from "../components/Document.svelte";
+  export let data; // { error, pages, html, anchors }
 </script>
 
 <div>
-  <pre><code>{ JSON.stringify(data, null, 2) }</code></pre>
+	<Document { data } />
 </div>

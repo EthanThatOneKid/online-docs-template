@@ -10,7 +10,7 @@ const readdirRecursive = (dir, root = dir) => {
     result[name] = fileStat.isDirectory()
       ? readdirRecursive(filePath, root)
       : ext === ".md" && name !== "README"
-      ? path.relative(root, filePath)
+      ? path.relative(root, filePath).slice(0, -3)
       : undefined;
   });
   return result;

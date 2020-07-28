@@ -15,7 +15,7 @@ export async function get(req, res, next) {
       return res.end(JSON.stringify({ pages, html, anchors }));
     }
     res.status = 404;
-    const message = `No such home (README) document.`;
+    const message = `No such 'home' (README) document.`;
     return res.end(JSON.stringify({ error: { message } }));
   }
   res.status = 500;
