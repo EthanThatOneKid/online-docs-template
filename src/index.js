@@ -9,10 +9,6 @@ import {
   getHome
 } from "./helpers";
 
-const dist = "../dist/";
-const root = path.join(__dirname, "../pages");
-const pages = readdirRecursive(root);
-
 const createPage = (title, location) => {
   const doc = getDocument(pages, `${location}.md`);
   const content = getHTML(doc);
@@ -22,9 +18,17 @@ const createPage = (title, location) => {
   fs.writeFileSync(`${savePath}/index.html`, App({ title, pages, content, anchors }));
 };
 
-const make = (pages, root, depth = 0) => {
+const make = (pages, root) => {
   Object.entries(pages)
     .forEach(([title, location]) => {
-      // recursively createPage and make
+      typeof location === "string"
+        ? createPage(title, location)
+        : make(location, path.join(root, title));
     });
 };
+
+const dist = "../dist/";
+const root = path.join(__dirname, "../pages");
+const pages = readdirRecursive(root);
+
+make(pages, root);
