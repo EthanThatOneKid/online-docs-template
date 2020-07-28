@@ -1,9 +1,10 @@
 <script context="module">
 	export async function preload(page, session) {
 		const { path } = page.params;
-		const res = await this.fetch(`${path.join("/")}.json`);
+		const url = `${path.join("/")}.json`;
+		const res = await this.fetch(url);
 		const data = await res.json();
-		return data;
+		return { data };
 	}
 </script>
 

@@ -5,9 +5,6 @@
 	"[javascript]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	},
-	"[typescript]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
-	},
 	"eslint.format.enable": true,
 	"eslint.lintTask.enable": true,
 	"deno.enable": false,

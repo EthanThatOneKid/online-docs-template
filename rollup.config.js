@@ -6,6 +6,8 @@ import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -20,9 +22,7 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode),
-				'process.env.GITHUB_USERNAME': process.env.GITHUB_USERNAME,
-				'process.env.PROJECT_NAME': process.env.PROJECT_NAME,
+				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
 			svelte({
 				dev,
@@ -67,7 +67,9 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': false,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
+				'process.env.GITHUB_USERNAME': `"${process.env.GITHUB_USERNAME}"`,
+				'process.env.PROJECT_NAME': `"${process.env.PROJECT_NAME}"`,
 			}),
 			svelte({
 				generate: 'ssr',
