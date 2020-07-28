@@ -1,5 +1,8 @@
 <script>
   export let anchors;
+  if (anchors === undefined || anchors === null) {
+    anchors = {};
+  }
 </script>
 
 <ul>

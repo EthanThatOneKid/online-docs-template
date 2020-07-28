@@ -9,11 +9,11 @@ export const getAnchors = (html) => {
         result[id] = content;
         return result;
       }, {})
-    : null;
+    : undefined;
 };
 
 export const getHTML = async (path) => {
-  const url = `https://raw.githubusercontent.com/${process.env.GITHUB_USERNAME}/${process.env.PROJECT_NAME}/master/pages/${path}`;
+  const url = `https://raw.githubusercontent.com/${process.env.GITHUB_USERNAME}/${process.env.PROJECT_NAME}/master/pages/${path}.md`;
   const res = await fetch(url);
   const md = await res.text();
   const html = marked(md);
