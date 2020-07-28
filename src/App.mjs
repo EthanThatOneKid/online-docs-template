@@ -1,0 +1,21 @@
+import Anchors from "./components/Anchors.mjs";
+import Navigation from "./components/Navigation.mjs";
+
+export default ({ title, pages, content, anchors, style, dirname }) => `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title}</title>
+  <link rel="stylesheet" href="style.css">
+  <style>${style}</style>
+</head>
+<body>
+  ${Navigation({ pages, root, dirname })}
+  ${content}
+  ${Anchors({ anchors })}
+</body>
+</html>
+`;
+

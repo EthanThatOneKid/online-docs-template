@@ -3,34 +3,16 @@
   "description": "A template for creating documentation with markdown files online.",
   "version": "0.0.1",
   "scripts": {
-    "dev": "nodemon ./src/index.js",
-    "build": "node ./src/index.js",
+    "dev": "nodemon ./src/index.mjs",
+    "build": "node ./src/index.mjs",
     "deploy": "node ./scripts/deploy.js"
   },
   "dependencies": {
-    "compression": "^1.7.1",
-    "marked": "^1.1.1",
-    "node-fetch": "^2.6.0",
-    "polka": "next",
-    "sirv": "^0.4.0"
+    "marked": "^1.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/runtime": "^7.0.0",
-    "@rollup/plugin-babel": "^5.0.0",
-    "@rollup/plugin-commonjs": "^12.0.0",
-    "@rollup/plugin-node-resolve": "^8.0.0",
-    "@rollup/plugin-replace": "^2.2.0",
     "dotenv": "^8.2.0",
     "gh-pages": "^3.1.0",
-    "npm-run-all": "^4.1.5",
-    "rollup": "^2.3.4",
-    "rollup-plugin-svelte": "^5.0.1",
-    "rollup-plugin-terser": "^5.3.0",
-    "sapper": "^0.27.0",
-    "svelte": "^3.0.0"
+    "nodemon": "^2.0.4"
   }
 }
