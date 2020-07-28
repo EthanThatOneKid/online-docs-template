@@ -12,7 +12,8 @@
 
 	{#if data.error !== undefined}
 		<Error message={data.error.message} />
-	{:else}
+  {:else}
+    <a href="/">Home</a>
 		<Navigation pages={data.pages} />
 		<Content html={data.html} />
 		<Anchors anchors={data.anchors} />
