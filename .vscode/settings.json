@@ -6,6 +6,6 @@
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	},
 	"eslint.format.enable": true,
-	"eslint.lintTask.enable": true,
+	"eslint.lintTask.enable": false,
 	"deno.enable": false,
 }
