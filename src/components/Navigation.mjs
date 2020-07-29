@@ -1,6 +1,4 @@
-import path from "path";
-
-const Navigation = ({ pages, dirname }) => `
+const Navigation = ({ pages, base }) => `
 <ul>
 ${
     Object.entries(pages || {})
@@ -8,10 +6,8 @@ ${
         <li>
             ${
                 typeof link === "string"
-                    ? `<a href="${
-                        path.relative(link, dirname || "")
-                    }">${title}</a>`
-                    : title + Navigation({ pages: link })
+                    ? `<a href="${new URL(link, base)}">${title}</a>`
+                    : title + Navigation({ pages: link, base })
             }
         </li>
         `)
@@ -19,4 +15,5 @@ ${
 }
 </ul>
 `;
+
 export default Navigation;

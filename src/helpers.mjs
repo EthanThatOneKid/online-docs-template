@@ -38,11 +38,11 @@ export const readdirRecursive = (dir, root = dir) => {
     const filePath = path.join(dir, file);
     const fileStat = fs.lstatSync(filePath);
     const { name, ext } = path.parse(filePath);
-    result[name] = fileStat.isDirectory()
-      ? readdirRecursive(filePath, root)
-      : ext === ".md" && name !== "README"
-      ? path.relative(root, filePath).slice(0, -3)
-      : undefined;
+    if (fileStat.isDirectory()) {
+      result[name] = readdirRecursive(filePath, root);
+    } else if (ext === ".md" && name !== "README") {
+      result[name] = path.relative(root, filePath).slice(0, -3);
+    }
   });
   return result;
 };

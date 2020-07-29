@@ -10,12 +10,14 @@ import {
   getHome
 } from "./helpers.mjs";
 import { fileURLToPath } from 'url';
+import dotenv from "dotenv";
+dotenv.config();
 
 const savePage = ({ savePath, title, content, anchors }) => {
   fs.mkdirSync(savePath, { recursive: true });
   fs.writeFileSync(
     path.join(savePath, "index.html"),
-    App({ title, pages, content, anchors, style, dirname: savePath })
+    App({ title, pages, content, anchors, style, base })
   );
 };
 
@@ -51,6 +53,9 @@ const dist = path.join(dirname, "../dist");
 const root = path.join(dirname, "../pages");
 const pages = readdirRecursive(root);
 const style = getStyle(dirname);
+const base = process.env.npm_lifecycle_event !== "dev"
+  ? `https://${process.env.GITHUB_USERNAME}.github.io/${process.env.PROJECT_NAME}/`
+  : "http://localhost:3000/";
 
 try {
   fs.rmdirSync(dist, { recursive: true });

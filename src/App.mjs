@@ -1,7 +1,7 @@
 import Anchors from "./components/Anchors.mjs";
 import Navigation from "./components/Navigation.mjs";
 
-export default ({ title, pages, content, anchors, style, dirname }) => `
+export default ({ title, pages, content, anchors, style, base }) => `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@ export default ({ title, pages, content, anchors, style, dirname }) => `
   <style>${style}</style>
 </head>
 <body>
-  ${Navigation({ pages, root, dirname })}
+  ${Navigation({ pages, base })}
   ${content}
   ${Anchors({ anchors })}
 </body>
