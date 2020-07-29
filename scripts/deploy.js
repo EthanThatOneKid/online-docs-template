@@ -10,7 +10,7 @@ const {
 	PROJECT_NAME,
 } = process.env;
 
-const exportCommand = `${pkg.scripts.export} --basepath ${PROJECT_NAME}`;
+const exportCommand = `${pkg.scripts.build}`;
 const deployURL = `https://${GITHUB_USERNAME}.github.io/${PROJECT_NAME}`.toLowerCase();
 
 exec(
@@ -22,7 +22,7 @@ exec(
 		console.log(stdout);
 		console.log("Deploying to GitHub Pages...");
 		ghpages.publish(
-			`__sapper__/export/${PROJECT_NAME}`,
+			`dist/${PROJECT_NAME}`,
 			{
 				branch: "gh-pages",
 				repo: `https://github.com/${GITHUB_USERNAME}/${PROJECT_NAME}.git`,
