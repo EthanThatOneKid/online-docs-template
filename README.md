@@ -13,8 +13,6 @@ Check out the [demo](https://ethanthatonekid.github.io/online-docs-template/)!
 1. Make it your own by editing the [`pages`](pages) directory!
 
 ## Deployment 🚀
-1. Sync your pages structure...
-	1. Generate a file for your pages structure: `npm run generate`.
-	1. Commit and push your changes.
-1. Deploy the site: `npm run deploy`.
+1. Set your [`.env`](.env.sample) secrets in your GitHub repository: `Settings > Secrets > New Secret`.
+1. Now, every push will trigger a deployment!
 
