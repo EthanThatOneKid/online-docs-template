@@ -13,19 +13,20 @@ import { fileURLToPath } from 'url';
 import dotenv from "dotenv";
 dotenv.config();
 
-const savePage = ({ savePath, title, content, anchors }) => {
+const savePage = ({ location, title, content, anchors }) => {
+  const savePath = path.join(dist, location === "README" ? "" : location);
   fs.mkdirSync(savePath, { recursive: true });
   fs.writeFileSync(
     path.join(savePath, "index.html"),
-    App({ title, pages, content, anchors, style, base })
+    App({ title, pages, content, anchors, style, base, location })
   );
 };
 
 const createHome = (root) => {
   const content = getHome(root);
   savePage({
-    savePath: dist,
-    title: "Home",
+    location: "README",
+    title: "",
     anchors: getAnchors(content),
     content
   });
@@ -35,8 +36,7 @@ const createPage = (title, location, root) => {
   const doc = getDocument(pages, location.split("\\"));
   const content = getHTML(path.join(root, `${doc}.md`));
   const anchors = getAnchors(content);
-  const savePath = path.join(dist, location);
-  savePage({ savePath, title, content, anchors });
+  savePage({ location, title, content, anchors });
 };
 
 const createApp = (pages, dir, root = dir) => {
