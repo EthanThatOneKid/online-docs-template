@@ -60,6 +60,7 @@ const base = process.env.npm_lifecycle_event !== "dev"
 try {
   fs.rmdirSync(dist, { recursive: true });
   fs.mkdirSync(dist);
+  console.log({ pages });
 } catch (error) {
   console.log({ error });
 }
