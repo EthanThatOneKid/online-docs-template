@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Docs | Test Article</title>
+  <title>Online Docs | Getting Started</title>
   <link rel="icon" href="https://github.com/EthanThatOneKid/online-docs-template/blob/master/static/favicon.svg?raw=true"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
@@ -172,26 +172,52 @@
         <main class="flex-1 relative z-0 overflow-y-auto focus:outline-none" tabindex="0">
           <div class="max-w-screen-lg px-4 sm:px-6 md:px-8 pb-12">
             <div class="py-6">
-              <a class="py-24" href="https://github.com/EthanThatOneKid/online-docs-template/edit/master/pages/path/to/Test Article.md">
-                📝 github.com/EthanThatOneKid/online-docs-template/edit/master/pages/path/to/Test Article.md
+              <a class="py-24" href="https://github.com/EthanThatOneKid/online-docs-template/edit/master/pages/Getting Started.md">
+                📝 github.com/EthanThatOneKid/online-docs-template/edit/master/pages/Getting Started.md
               </a>
               <div>
-                <div class="markdown-body"><h3 id="hopefully">Hopefully</h3>
-<ul>
-<li>When this change is pushed<ul>
-<li>It will auto-generate the page</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="what-a">What a</h3>
-<h4 id="wacky"><em>WACKY</em></h4>
-<h5 id="silly"><strong>SILLY</strong></h5>
-<h6 id="test-article-">TeSt ArTiClE <del>~</del></h6>
+                <div class="markdown-body"><h1 id="getting-started">Getting Started</h1>
 <blockquote>
-<p>...this is</p>
+<p>This page explains how to get started with the <a href="https://github.com/EthanThatOneKid/online-docs-template">Online-Docs-Template</a></p>
 </blockquote>
-<pre><code class="language-js">console.log(&quot;Hello, World!&quot;);</code></pre>
+<p>By the end of these instructions, you should have a working GitHub-powered content management system (<a href="https://en.wikipedia.org/wiki/Content_management_system">CMS</a>) that updates your site as you choose to edit it!</p>
+<h2 id="getting-started-🍎">Getting Started 🍎</h2>
+<ol>
+<li>Create a new repository using this one as a <a href="https://github.com/EthanThatOneKid/online-docs-template/generate">template</a>.</li>
+<li>Clone your new repository to your desktop.</li>
+<li>Initialize your repository...<ol>
+<li>Install the dependencies with <code>npm i</code>.</li>
+<li>Rename <a href=".env.sample"><code>.env.sample</code></a> to <code>.env</code> and fill it with the appropriate info.</li>
+<li>Customize the metadata within your <a href="package.json"><code>package.json</code></a>.</li>
+</ol>
+</li>
+<li>Make it your own by editing the <a href="pages"><code>pages</code></a> directory!</li>
+</ol>
+<h2 id="editing-documents-🖊">Editing Documents 🖊</h2>
+<h3 id="edit-existing-online-📝">Edit Existing (Online) 📝</h3>
+<ol>
+<li>Visit your live site.</li>
+<li>Navigate to the page that you wish to edit.</li>
+<li>Click the link at the top of the page to edit the document.</li>
+<li>Commit your changes.</li>
+</ol>
+<h3 id="create-new-online-💡">Create New (Online) 💡</h3>
+<ol>
+<li>Visit the <a href="pages"><code>pages</code></a> directory on GitHub.</li>
+<li>Navigate: <code>Add file &gt; Create new file</code>.</li>
+<li>Commit the new file.</li>
+</ol>
+<h3 id="work-on-desktop">Work on Desktop</h3>
+<ol>
+<li>Open your repository in your favorite code editor.</li>
+<li>Edit the contents of the <a href="pages"><code>pages</code></a> directory.</li>
+<li>Commit your changes.</li>
+</ol>
+<h2 id="deployment-🚀">Deployment 🚀</h2>
+<ol>
+<li>Set your <a href=".env.sample"><code>.env</code></a> secrets in your GitHub repository: <code>Settings &gt; Secrets &gt; New Secret</code>.</li>
+<li>Now, every push will trigger a deployment!</li>
+</ol>
 </div>
               </div>
             </div>
