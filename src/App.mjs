@@ -7,7 +7,7 @@ export default ({ title, pages, content, anchors, style, base, location }) => `
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${title}</title>
+  <title>${process.env.PROJECT_TITLE}${!!title && title.length > 0 ? ` | ${title}` : ""}</title>
   <link rel="icon" href="https://github.com/${process.env.GH_USERNAME}/${process.env.PROJECT_NAME}/blob/master/static/favicon.svg?raw=true"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
