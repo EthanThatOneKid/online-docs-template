@@ -71,7 +71,7 @@ const onSidebarOpen = () => {
 const inline = fn => `(${fn.toString()})()`;
 
 const getGithubLink = (location) => {
-  return `github.com/${process.env.GH_USERNAME}/${process.env.PROJECT_NAME}/blob/master/pages/${location.replace("\\", "/")}.md`;
+  return `github.com/${process.env.GH_USERNAME}/${process.env.PROJECT_NAME}/edit/master/pages/${location.replace("\\", "/")}.md`;
 };
 
 /*
