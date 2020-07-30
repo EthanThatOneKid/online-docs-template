@@ -34,9 +34,11 @@ const createHome = (root) => {
 
 const createPage = (title, location, root) => {
   const doc = getDocument(pages, location.split("\\"));
-  const content = getHTML(path.join(root, `${doc}.md`));
-  const anchors = getAnchors(content);
-  savePage({ location, title, content, anchors });
+  if (doc !== null) {
+    const content = getHTML(path.join(root, `${doc}.md`));
+    const anchors = getAnchors(content);
+    savePage({ location, title, content, anchors });
+  }
 };
 
 const createApp = (pages, dir, root = dir) => {
