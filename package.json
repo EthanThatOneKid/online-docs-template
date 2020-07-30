@@ -3,17 +3,14 @@
   "description": "A template for creating documentation with markdown files online.",
   "version": "0.0.1",
   "scripts": {
-    "dev": "nodemon ./src/server.mjs --exec node ./src/index.mjs",
-    "build": "node ./src/index.mjs",
-    "deploy": "node ./scripts/deploy.js"
+    "dev": "nodemon ./src/index.mjs",
+    "build": "node ./src/index.mjs"
   },
   "dependencies": {
-    "express": "^4.17.1",
     "marked": "^1.1.1"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
-    "gh-pages": "^3.1.0",
     "nodemon": "^2.0.4"
   }
 }
