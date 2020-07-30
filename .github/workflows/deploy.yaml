@@ -20,6 +20,7 @@ jobs:
           GH_NAME: ${{secrets.GH_NAME}}
           GH_EMAIL: ${{secrets.GH_EMAIL}}
           PROJECT_NAME: ${{secrets.PROJECT_NAME}}
+          PROJECT_TITLE: ${{secrets.PROJECT_TITLE}}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.5.9
