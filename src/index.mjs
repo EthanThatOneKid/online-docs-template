@@ -20,7 +20,7 @@ const savePage = ({ location, title, content, anchors }) => {
     path.join(savePath, "index.html"),
     App({ title, pages, content, anchors, style, base, location })
   );
-  console.log(`Saved '${title}' as '${path.join(savePath, "index.html")}'!`);
+  console.log(`Saved '${title}' as '${path.join(savePath, "index.html")}'!`, JSON.stringify(pages, null, 2));
 };
 
 const createHome = (root) => {
