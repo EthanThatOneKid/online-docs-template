@@ -3,10 +3,10 @@ const Navigation = ({ pages, base }) => `
 ${
     Object.entries(pages || {})
         .map(([title, link]) => `
-        <li class="ml-10">
+        <li class="ml-3">
             ${
                 typeof link === "string"
-                    ? `<a href="${new URL(link, base)}">${title}</a>`
+                    ? `<a class="hover:underline" href="${new URL(link, base)}">${title}</a>`
                     : title + Navigation({ pages: link, base })
             }
         </li>

@@ -45,7 +45,9 @@ export default ({ title, pages, content, anchors, style, base, location }) => `
         <main class="flex-1 relative z-0 overflow-y-auto focus:outline-none" tabindex="0">
           <div class="max-w-screen-lg px-4 sm:px-6 md:px-8 pb-12">
             <div class="py-6">
-              <a class="py-6" href="https://${getGithubLink(location)}">${getGithubLink(location)}</a>
+              <a class="py-24" href="https://${getGithubLink(location)}">
+                📝 ${getGithubLink(location)}
+              </a>
               <div>
                 <div class="markdown-body">${content}</div>
               </div>
