@@ -20,7 +20,7 @@ jobs:
     - run: npm install
     - run: npm run deploy
       env:
-        GITHUB_USERNAME: ${{secrets.GITHUB_USERNAME}}
-        GITHUB_NAME: ${{secrets.GITHUB_NAME}}
-        GITHUB_EMAIL: ${{secrets.GITHUB_EMAIL}}
+        GH_USERNAME: ${{secrets.GH_USERNAME}}
+        GH_NAME: ${{secrets.GH_NAME}}
+        GH_EMAIL: ${{secrets.GH_EMAIL}}
         PROJECT_NAME: ${{secrets.PROJECT_NAME}}

@@ -68,7 +68,7 @@ export default {
 			replace({
 				'process.browser': false,
 				'process.env.NODE_ENV': JSON.stringify(mode),
-				'process.env.GITHUB_USERNAME': `"${process.env.GITHUB_USERNAME}"`,
+				'process.env.GH_USERNAME': `"${process.env.GH_USERNAME}"`,
 				'process.env.PROJECT_NAME': `"${process.env.PROJECT_NAME}"`,
 			}),
 			svelte({

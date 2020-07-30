@@ -54,7 +54,7 @@ const root = path.join(dirname, "../pages");
 const pages = readdirRecursive(root);
 const style = getStyle(dirname);
 const base = process.env.npm_lifecycle_event !== "dev"
-  ? `https://${process.env.GITHUB_USERNAME}.github.io/${process.env.PROJECT_NAME}/`
+  ? `https://${process.env.GH_USERNAME}.github.io/${process.env.PROJECT_NAME}/`
   : "http://localhost:3000/";
 
 try {

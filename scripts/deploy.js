@@ -4,14 +4,14 @@ const pkg = require("../package.json");
 require("dotenv").config();
 
 const {
-	GITHUB_USERNAME,
-	GITHUB_NAME,
-	GITHUB_EMAIL,
+	GH_USERNAME,
+	GH_NAME,
+	GH_EMAIL,
 	PROJECT_NAME,
 } = process.env;
 
 const exportCommand = `${pkg.scripts.build}`;
-const deployURL = `https://${GITHUB_USERNAME}.github.io/${PROJECT_NAME}`.toLowerCase();
+const deployURL = `https://${GH_USERNAME}.github.io/${PROJECT_NAME}`.toLowerCase();
 
 exec(
 	exportCommand,
@@ -25,10 +25,10 @@ exec(
 			`dist/${PROJECT_NAME}`,
 			{
 				branch: "gh-pages",
-				repo: `https://github.com/${GITHUB_USERNAME}/${PROJECT_NAME}.git`,
+				repo: `https://github.com/${GH_USERNAME}/${PROJECT_NAME}.git`,
 				user: {
-					name: GITHUB_NAME,
-					email: GITHUB_EMAIL,
+					name: GH_NAME,
+					email: GH_EMAIL,
 				},
 			},
 			() => {
