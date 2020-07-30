@@ -34,7 +34,7 @@ const createHome = (root) => {
 };
 
 const createPage = (title, location, root) => {
-  const doc = getDocument(pages, location.split(/\\|\//));
+  const doc = getDocument(pages, location.split(/\\|\//g));
   if (doc !== null) {
     const content = getHTML(path.join(root, `${doc}.md`));
     const anchors = getAnchors(content);
