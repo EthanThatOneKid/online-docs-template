@@ -34,6 +34,7 @@ const createHome = (root) => {
 };
 
 const createPage = (title, location, root) => {
+  console.log({pages,location})
   const doc = getDocument(pages, location.split("\\"));
   if (doc !== null) {
     const content = getHTML(path.join(root, `${doc}.md`));
