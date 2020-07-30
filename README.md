@@ -1,7 +1,7 @@
 # Online Docs Template 🌐
 > A template for creating documentation with markdown files online.
 
-Check out the [demo](https://ethanthatonekid.github.io/online-docs-template/Hello%20World)!
+Check out the [demo](https://ethanthatonekid.github.io/online-docs-template/)!
 
 ## Getting Started 🍎
 1. Create a new repository using this one as a [template](https://github.com/EthanThatOneKid/online-docs-template/generate).
