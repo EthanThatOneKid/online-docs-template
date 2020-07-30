@@ -1,5 +1,5 @@
 const Navigation = ({ pages, base }) => `
-<ul>
+<ul class="list-disc">
 ${
     Object.entries(pages || {})
         .map(([title, link]) => `
