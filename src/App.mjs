@@ -32,7 +32,9 @@ export default ({ title, pages, content, anchors, style, base, location }) => `
       </div>
       <div class="flex flex-col w-0 flex-1 overflow-hidden">
         <div class="relative z-10 flex-shrink-0 flex h-16 bg-white dark:bg-black shadow md:hidden border-b border-gray-200 dark:border-light-black-800">
-          <a class="px-4 flex items-center justify-center md:hidden" href="/"><img src="/favicon.svg" alt="logo" class="w-auto h-10"></a>
+          <a class="px-4 flex items-center justify-center md:hidden" href="/${process.env.PROJECT_NAME}">
+            <img src="https://github.com/${process.env.GH_USERNAME}/${process.env.PROJECT_NAME}/blob/master/static/favicon.svg?raw=true" alt="logo" class="w-auto h-10">
+          </a>
           <div class="flex-1 px-4 flex justify-between">
             <div class="flex-1 flex"></div>
           </div>

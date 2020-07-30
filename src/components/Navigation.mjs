@@ -6,7 +6,7 @@ ${
         <li class="ml-3">
             ${
                 typeof link === "string"
-                    ? `<a class="underline hover:bg-blue-500" href="${new URL(link, base)}">${title}</a>`
+                    ? `<a class="underline hover:text-blue-500" href="${new URL(link, base)}">${title}</a>`
                     : title + Navigation({ pages: link, base })
             }
         </li>
