@@ -3,6 +3,8 @@
 
 By the end of these instructions, you should have a working GitHub-powered content management system ([CMS](https://en.wikipedia.org/wiki/Content_management_system)) that updates your site as you choose to edit it!
 
+If you are unfamiliar with markdown, visit [this link](https://commonmark.org/help/) to help you out! ⚔
+
 ## Getting Started 🍎
 1. Create a new repository using this one as a [template](https://github.com/EthanThatOneKid/online-docs-template/generate).
 1. Clone your new repository to your desktop.
