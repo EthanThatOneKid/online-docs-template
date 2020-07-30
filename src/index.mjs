@@ -48,7 +48,9 @@ const createApp = (pages, dir, root = dir) => {
     });
 };
 
-const dirname = path.dirname(fileURLToPath(import.meta.url));
+const dirname = process.env.npm_lifecycle_event === "build"
+  ? path.dirname(fileURLToPath(import.meta.url))
+  : "/github/workspace/";
 const dist = path.join(dirname, `../dist/${process.env.PROJECT_NAME}/`);
 const root = path.join(dirname, "../pages");
 const pages = readdirRecursive(root);
