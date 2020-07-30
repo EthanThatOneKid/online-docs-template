@@ -52,7 +52,7 @@ const createApp = (pages, dir, root = dir) => {
 };
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
-const dist = path.join(dirname, `../dist/${process.env.PROJECT_NAME}/`);
+const dist = path.join(dirname, `../dist`);
 const root = path.join(dirname, "../pages");
 const pages = readdirRecursive(root);
 const style = getStyle(dirname);
