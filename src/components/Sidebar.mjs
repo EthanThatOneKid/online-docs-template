@@ -8,7 +8,7 @@ const onSidebarClose = () => {
 
 const inline = fn => `(${fn.toString()})()`;
 
-export default ({ title, isPopup, navigation }) => `
+export default ({ isPopup, navigation }) => `
 <div class="relative flex-1 flex flex-col max-w-xs w-full bg-white dark:bg-light-black-950 appear-done enter-done">
   ${
     isPopup
@@ -21,7 +21,7 @@ export default ({ title, isPopup, navigation }) => `
       </div>`
       : ""
   }
-  ${Header({ title })}
+  ${Header()}
   <div class="pt-2 pb-8 h-0 flex-1 flex flex-col overflow-y-auto">
     <nav class="flex-1 px-4">
       <div class="mt-2 mb-4">

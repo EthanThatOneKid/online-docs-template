@@ -22,13 +22,13 @@ export default ({ title, pages, content, anchors, style, base, location }) => `
           <div class="fixed inset-0 appear-done enter-done">
             <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
           </div>
-          ${Sidebar({ title, isPopup: true, navigation: { pages, base } })}
+          ${Sidebar({ isPopup: true, navigation: { pages, base } })}
           <div class="flex-shrink-0 w-14"></div>
         </div>
       </div>
       <!-- End Popup Sidebar -->
       <div class="hidden md:flex md:flex-shrink-0">
-        ${Sidebar({ title, navigation: { pages, base } })}
+        ${Sidebar({ navigation: { pages, base } })}
       </div>
       <div class="flex flex-col w-0 flex-1 overflow-hidden">
         <div class="relative z-10 flex-shrink-0 flex h-16 bg-white dark:bg-black shadow md:hidden border-b border-gray-200 dark:border-light-black-800">
