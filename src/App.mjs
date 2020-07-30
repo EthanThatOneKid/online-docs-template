@@ -1,7 +1,7 @@
 // import Anchors from "./components/Anchors.mjs";
 import Sidebar from "./components/Sidebar.mjs";
 
-export default ({ title, pages, content, anchors, style, base, location }) => `
+export default ({ title, pages, content, style, base, location }) => `
 <!DOCTYPE html>
 <html lang="en">
 <head>
