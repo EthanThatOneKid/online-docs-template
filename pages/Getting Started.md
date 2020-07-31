@@ -14,6 +14,8 @@ If you are unfamiliar with markdown, visit [this link](https://commonmark.org/he
 	1. Customize the metadata within your [`package.json`](package.json).
 1. Make it your own by editing the [`pages`](pages) directory!
 
+> 💡 Note: The [`README.md`](pages/README.md) file in the [`pages`](pages) directory represents the *homepage* of the site!
+
 ## Editing Documents 🖊
 
 ### Edit Existing (Online) 📝
