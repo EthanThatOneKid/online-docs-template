@@ -13,7 +13,7 @@ Check out the [demo](https://ethanthatonekid.github.io/online-docs-template/)!
 1. Initialize your repository...
 	1. Install the dependencies with `npm i`.
 	1. Rename [`.env.sample`](.env.sample) to `.env` and fill it with the appropriate info.
-	1. Customize the metadata within your [`package.json`](package.json).
+	1. [*optional*] Customize the metadata within your [`package.json`](package.json).
 1. Make it your own by editing the [`pages`](pages) directory!
 
 > 💡 Note: The [`README.md`](pages/README.md) file in the [`pages`](pages) directory represents the *homepage* of the site!
@@ -34,7 +34,7 @@ Check out the [demo](https://ethanthatonekid.github.io/online-docs-template/)!
 ### Work on Desktop
 1. Open your repository in your favorite code editor.
 1. Edit the contents of the [`pages`](pages) directory.
-1. Commit your changes.
+1. Commit and push your changes.
 
 ## Deployment 🚀
 1. Set your [`.env`](.env.sample) secrets in your GitHub repository: `Settings > Secrets > New Secret`.
