@@ -7,10 +7,10 @@
     "build": "node ./src/index.mjs"
   },
   "dependencies": {
-    "marked": "^1.1.1"
+    "marked": "^4.0.16"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
-    "nodemon": "^2.0.4"
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.16"
   }
 }
